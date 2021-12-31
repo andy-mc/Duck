@@ -11,5 +11,12 @@ public class DuckSimulator {
         model_duck.setFlyBehavior(new FlyWithJets());
         model_duck.performFly();
 
+        System.out.println("\n ------------------- \n");
+
+        DuckCaller duck_caller = new DuckCaller(new FlyNoWay(), new Quack());
+        duck_caller.quack();
+        duck_caller.setQuackBehavior(new Squick());
+        duck_caller.quack();
+
     }
 }
